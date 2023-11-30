@@ -119,30 +119,20 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>$(ProjectDir)Hashing\t1ha-static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="api_hasher.h" />
     <ClCompile Include="HashFunction.cpp" />
-    <ClCompile Include="Hashing\Function\myApi\HashFunc.cpp" />
-    <ClCompile Include="Hashing\Function\winApi\hashWork.cpp" />
-    <ClCompile Include="Tools\crt.cpp" />
-    <ClCompile Include="Tools\Utils.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="global.h" />
-    <ClInclude Include="Hashing\Function\myApi\HashFunc.h" />
-    <ClInclude Include="Hashing\Function\myApi\Table.hpp" />
-    <ClInclude Include="Hashing\Function\winApi\exportWork.hpp" />
-    <ClInclude Include="Hashing\Function\winApi\hashWork.hpp" />
-    <ClInclude Include="Tools\crt.h" />
-    <ClInclude Include="Tools\Utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

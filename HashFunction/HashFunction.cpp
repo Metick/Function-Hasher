@@ -1,13 +1,9 @@
-#include "global.h"
-#include "Hashing/Function/myApi/HashFunc.h"
-#include "Hashing/Function/winApi/hashWork.hpp"
+#include "api_hasher.h"
 
-int main() {
-	printf("Calling test after 1 second\n");
+int main()
+{
+	IMPORT_HASH(LoadLibraryA)("user32.dll");
+	IMPORT_HASH(MessageBoxW)(NULL, L"test", L"test", NULL);
 
-	hash_Sleep(1000);
-
-	API::hash_Test();
+	return (0);
 }
-
-
